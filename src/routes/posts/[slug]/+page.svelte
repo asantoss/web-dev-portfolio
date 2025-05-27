@@ -4,7 +4,6 @@
 
 	export let data: PageData;
 	const { project } = data;
-	console.log('Project data:', project);
 </script>
 
 <svelte:head>
