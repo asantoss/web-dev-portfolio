@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 
-import { getPostBySlug } from '$lib/server/datocms.server';
+import { getPostBySlug } from '$lib/server/datocms';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { slug } = params;
