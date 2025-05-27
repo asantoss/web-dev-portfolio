@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
 	import Nextjs from '../lib/icons/nextjs.svelte';
 	import Tailwind from '../lib/icons/tailwind.svelte';
-	import Vercel from '../lib/icons/vercel.svelte';
 	import Expo from '../lib/icons/expo.svelte';
 	import React from '../lib/icons/react.svelte';
 	import Vue from '../lib/icons/vue.svelte';
@@ -9,9 +8,13 @@
 	import Salesforce from '../lib/icons/salesforce.svelte';
 	import Azure from '../lib/icons/azure.svelte';
 	import Skill from '../components/skill.svelte';
+	import PostCard from '../components/post-card.svelte';
+	import type { PageProps } from './$types';
 
 	const year = new Date().getFullYear();
 	const email = 'asantos@lightningleap.us';
+
+	let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
@@ -34,7 +37,7 @@
 				<div class="bg-border h-0.25 w-full"></div>
 			</div>
 			<div class="flex h-fit items-center py-2 text-sm">
-				<p class="leading-normal">Software Developer</p>
+				<p class="leading-normal">Software Consultant</p>
 			</div>
 		</header>
 		<section class="flex flex-col gap-y-2">
@@ -44,26 +47,31 @@
 			</div>
 			<div class="py-2 text-sm">
 				<p class="leading-normal">
-					Hello! I'm Alexander Santos, a passionate software developer who loves building creative
+					Hello! I'm Alexander Santos, a passionate software consultant who loves building creative
 					solutions. I enjoy tinkering with hardware, exploring new web frameworks, and have
 					experience in Salesforce development and administration. Whether it's coding, configuring
 					systems, or experimenting with the latest tech, I'm always eager to learn and take on new
-					challenges.<br />Feel free to reach out to me (<span
-						class="inline-flex items-center gap-1 px-1"
+					challenges.<br />Feel free to reach out to
+					<span class="inline-flex items-center gap-1 px-1"
 						><a
 							href="mailto:{email}"
-							class="inline-flex w-fit cursor-pointer items-center justify-center gap-2 text-sm duration-300 hover:underline"
-							>Email</a
+							class="inline-flex w-fit cursor-pointer items-center justify-center gap-2 text-sm underline duration-300 hover:underline"
+							>me</a
 						></span
-					>) if you have any questions or just want to chat.
+					>
+					if you have any questions or just want to chat.
 				</p>
 			</div>
 		</section>
 		<section class="flex flex-col gap-y-2">
 			<div class="flex h-10 items-center text-base">
-				<h2 class="leading-normal">What I build</h2>
+				<h2 class="leading-normal">Posts</h2>
 			</div>
-			<div class="flex flex-col gap-4"></div>
+			<div class="flex flex-col gap-4">
+				{#each data.posts as post}
+					<PostCard {post} />
+				{/each}
+			</div>
 		</section>
 		<section class="flex flex-col gap-y-2">
 			<div class="flex h-10 items-center text-base"><h2 class="leading-normal">What I use</h2></div>
