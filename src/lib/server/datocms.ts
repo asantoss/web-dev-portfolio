@@ -14,7 +14,7 @@ const client = new SiteClient(DATOCMS_API_TOKEN);
 export async function getAllPosts() {
 	return client.items.all({
 		filter: { type: 'post' },
-		order_by: ''
+		order_by: '_firstPublishedAt_DESC'
 	});
 }
 
