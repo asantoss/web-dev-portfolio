@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import ModularContent from '../../../components/modular-content.svelte';
 
 	export let data: PageData;
 	const { project } = data;
