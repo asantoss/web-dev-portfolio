@@ -95,9 +95,6 @@
 				<Skill title="Azure">
 					<Azure />
 				</Skill>
-				<Skill title="Vercel">
-					<Vercel />
-				</Skill>
 			</div>
 		</section>
 	</div>

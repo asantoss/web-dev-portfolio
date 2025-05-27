@@ -10,6 +10,6 @@
 	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
 	rel="stylesheet"
 />
-<main class="flex min-h-screen flex-col items-center px-4 pt-16 leading-relaxed">
+<main class="flex min-h-screen flex-col items-center px-4 pt-8 leading-relaxed md:pt-16">
 	{@render children()}
 </main>
