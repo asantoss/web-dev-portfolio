@@ -1,38 +1,42 @@
-# sv
+# Web Dev Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is a personal portfolio project built with [SvelteKit](https://kit.svelte.dev/). It showcases my web development skills, projects, and experience.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Built with SvelteKit for fast, modern web development
+- Responsive design for all devices
+- Project showcase with descriptions and links
+- Contact form
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Getting Started
 
-# create a new project in my-app
-npx sv create my-app
-```
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/web-dev-portfolio.git
+    cd web-dev-portfolio
+    ```
 
-## Developing
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-```bash
-npm run dev
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Deployment
 
-## Building
+You can deploy this project to platforms like Vercel, Netlify, or your own server. See the [SvelteKit deployment docs](https://kit.svelte.dev/docs/adapters) for more information.
 
-To create a production version of your app:
+## License
 
-```bash
-npm run build
-```
+This project is open source and available under the [MIT License](LICENSE).
 
-You can preview the production build with `npm run preview`.
+---
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+**Made with ❤️ using SvelteKit.**
