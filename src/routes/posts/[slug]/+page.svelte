@@ -23,7 +23,7 @@
 		{/if}
 	</header>
 	<div class="min-h-64">
-		<ModularContent blocks={project.content} />
+		<div class="prose">{@html project.content}</div>
 	</div>
 
 	<a
