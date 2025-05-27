@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 
-import { getLatestPosts } from '$lib/server/datocms';
+import { getLatestPosts } from '$lib/server/datocms.server';
 
 export const load: PageServerLoad = async () => {
 	const posts = await getLatestPosts();
