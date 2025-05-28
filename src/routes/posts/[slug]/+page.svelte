@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{post.title} - Alexander Santos</title>
+	<title>{post.title}</title>
 	<meta name="description" content={post.description ?? post.title} />
 </svelte:head>
 
