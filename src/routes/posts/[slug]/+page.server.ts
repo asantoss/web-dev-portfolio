@@ -1,12 +1,18 @@
 import type { PageServerLoad } from './$types';
-
-import { getPostBySlug } from '$lib/server/sanity';
+import { error } from '@sveltejs/kit';
+import { getPostBySlug } from '$lib/server/queries';
+import { marked } from 'marked';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { slug } = params;
+
 	const post = await getPostBySlug(slug);
+
 	if (!post) {
-		return { status: 404, error: new Error('Post not found') };
+		throw error(404, 'Post not found');
 	}
-	return { post };
+
+	const html = marked(post.content);
+
+	return { post: { ...post, html } };
 };

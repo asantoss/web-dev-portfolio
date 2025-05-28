@@ -6,25 +6,33 @@
 
 <svelte:head>
 	<title>{post.title} - Alexander Santos</title>
+	<meta name="description" content={post.description ?? post.title} />
 </svelte:head>
 
-<div class="font-lexend mx-auto flex max-w-xl flex-col gap-y-8">
+<div class="font-lexend mx-auto flex max-w-xl flex-col gap-y-8 px-4 py-12">
 	<header class="flex flex-col gap-y-2">
 		<h1 class="text-2xl leading-tight font-semibold">{post.title}</h1>
-		<p class="text-sm text-gray-500">{new Date(post.publishedAt).toLocaleDateString()}</p>
+		<p class="text-sm text-gray-500">
+			{new Date(post.publishedAt).toLocaleDateString(undefined, {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric'
+			})}
+		</p>
 
-		{#if post.mainImage?.asset?._ref}
+		{#if post.image}
 			<img
-				src={`https://cdn.sanity.io/images/YOUR_PROJECT_ID/production/${post.mainImage.asset._ref.replace('image-', '').replace(/-(jpg|png|webp)$/, '.$1')}`}
+				src={post.image}
 				alt={post.title}
 				class="mt-4 aspect-video rounded-lg border object-cover"
+				loading="lazy"
 			/>
 		{/if}
 	</header>
 
-	<div class="prose dark:prose-invert min-h-64">
-		{@html post.body}
-	</div>
+	<article class="prose dark:prose-invert min-h-64">
+		{@html post.html}
+	</article>
 
 	<a
 		href="/"
