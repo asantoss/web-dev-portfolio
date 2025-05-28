@@ -48,7 +48,7 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const tokenParams = {
 		code,
-		redirect_uri: `https://alexsantos.dev/auth/callback?provider=github`
+		redirect_uri: `${url.origin}/api/auth/callback?provider=github`
 	};
 
 	try {
