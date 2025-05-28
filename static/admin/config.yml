@@ -3,7 +3,7 @@ backend:
   repo: asantoss/web-dev-portfolio
   branch: main
   base_url: https://alexsantos.dev/api
-  site_domain: https://alexsantos.dev
+  site_domain: https://alexsantos.dev/api
 
 media_folder: 'src/images'
 public_folder: '/images'
