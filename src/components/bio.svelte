@@ -39,7 +39,7 @@
 					aria-label="{link.name} profile"
 				>
 					<link.icon />
-					{link.name}
+					<span class="hidden md:inline">{link.name}</span>
 				</a>
 			{/each}
 		</div>
