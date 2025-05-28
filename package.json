@@ -55,6 +55,7 @@
 		"@libsql/client": "^0.14.0",
 		"@portabletext/svelte": "^3.0.0",
 		"@sanity/client": "^7.3.0",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltia/cms": "^0.78.0",
 		"datocms-client": "^3.5.24",
 		"drizzle-orm": "^0.40.0",
