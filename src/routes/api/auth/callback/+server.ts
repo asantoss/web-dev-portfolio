@@ -25,7 +25,7 @@ function renderBody(status: string, token?: string): string {
 export const GET: RequestHandler = async ({ url }) => {
 	const provider = url.searchParams.get('provider');
 	const code = url.searchParams.get('code');
-
+	console.log('Received callback with provider:', provider, 'and code:', code);
 	if (provider !== 'github') {
 		return new Response('Invalid provider', { status: 400 });
 	}
