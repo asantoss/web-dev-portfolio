@@ -1,5 +1,5 @@
 ---
-title: Salesforce Developrt
+title: Salesforce Developer
 description: Read this blog post!
 image: /images/hello.png
 draft: false
