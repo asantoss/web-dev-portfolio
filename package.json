@@ -34,7 +34,6 @@
 		"@testing-library/svelte": "^5.2.4",
 		"@types/node": "^22",
 		"@types/simple-oauth2": "^5.0.7",
-		"drizzle-kit": "^0.30.2",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
@@ -49,8 +48,7 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.2.6",
-		"vitest": "^3.0.0",
-		"wrangler": "^4.17.0"
+		"vitest": "^3.0.0"
 	},
 	"dependencies": {
 		"@portabletext/svelte": "^3.0.0",
