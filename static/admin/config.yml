@@ -2,9 +2,7 @@ backend:
   name: github
   repo: asantoss/web-dev-portfolio
   branch: main
-  auth_scope: repo
   base_url: https://alexsantos.dev
-  auth_endpoint: api/auth
   site_domain: https://alexsantos.dev
 
 media_folder: 'src/images'
