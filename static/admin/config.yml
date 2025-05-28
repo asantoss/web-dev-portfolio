@@ -4,6 +4,7 @@ backend:
   branch: main
   base_url: https://alexsantos.dev/api
   site_domain: https://alexsantos.dev/api
+  automatic_deployments: false
 
 media_folder: 'src/images'
 public_folder: '/images'
