@@ -1,21 +1,21 @@
 <script lang="ts">
-	export let post: {
-		slug: string;
-		title: string;
-		description?: string;
-	};
+	import type { Post } from '../types/cms';
+
+	export let post: Post;
 </script>
 
 <a
 	href={`/posts/${post.slug}`}
-	target="_blank"
 	class="group bg-surface relative flex flex-col gap-2 overflow-hidden rounded-xl border p-2 opacity-100 hover:outline-2"
 >
 	<div class="flex items-center justify-between">
 		<h3 class="flex items-center px-2 py-1 text-sm font-semibold capitalize">
 			{post.title}
 		</h3>
-		<div class="flex items-center justify-center rounded p-2 text-xs">
+		<div class="flex items-center justify-center gap-2 rounded p-2 text-xs">
+			<span class=" text-gray-500 dark:text-gray-400">
+				{new Date(post.date).toLocaleDateString()}
+			</span>
 			<svg
 				focusable="false"
 				fill="currentColor"

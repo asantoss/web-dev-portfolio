@@ -9,7 +9,13 @@
 	<meta name="description" content={post.description ?? post.title} />
 </svelte:head>
 
-<div class="font-lexend mx-auto flex max-w-xl flex-col gap-y-8 px-4 py-12">
+<div class="font-lexend mx-auto flex max-w-xl flex-col gap-y-8 px-4">
+	<a
+		href="/"
+		class="mt-10 inline-flex items-center text-sm text-blue-500 underline transition hover:text-blue-600"
+	>
+		← Home
+	</a>
 	<header class="flex flex-col gap-y-2">
 		<h1 class="text-2xl leading-tight font-semibold">{post.title}</h1>
 		<p class="text-sm text-gray-500">
@@ -30,14 +36,7 @@
 		{/if}
 	</header>
 
-	<article class="prose dark:prose-invert min-h-64">
+	<article class="prose dark:prose-invert">
 		{@html post.html}
 	</article>
-
-	<a
-		href="/"
-		class="mt-10 inline-flex items-center text-sm text-blue-500 underline transition hover:text-blue-600"
-	>
-		← Back to portfolio
-	</a>
 </div>

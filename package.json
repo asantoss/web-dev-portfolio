@@ -67,8 +67,7 @@
 		"marked": "^15.0.12",
 		"openai": "^4.103.0",
 		"sharp": "^0.34.2",
-		"simple-oauth2": "^5.1.0",
-		"svelte-motion": "^0.12.2"
+		"simple-oauth2": "^5.1.0"
 	},
 	"engines": {
 		"node": ">=18.18.0"

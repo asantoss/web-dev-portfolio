@@ -1,19 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import type { Post } from '../../types/cms';
 
 const postsDir = path.resolve('src/posts');
-
-export interface Post {
-	slug: string;
-	title: string;
-	publishedAt: string;
-	description?: string;
-	image?: string;
-	tags?: string[];
-	draft?: boolean;
-	content: string;
-}
 
 export const getAllPosts = async (): Promise<Post[]> => {
 	const files = fs.readdirSync(postsDir).filter((f) => f.endsWith('.md'));
@@ -26,7 +16,7 @@ export const getAllPosts = async (): Promise<Post[]> => {
 		return {
 			slug,
 			title: data.title,
-			publishedAt: data.publishedAt,
+			date: data.date,
 			description: data.description || '',
 			image: data.image || null,
 			tags: data.tags || [],
@@ -36,8 +26,8 @@ export const getAllPosts = async (): Promise<Post[]> => {
 	});
 
 	return posts
-		.filter((p) => !p.draft && new Date(p.publishedAt) <= new Date())
-		.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+		.filter((p) => !p.draft && new Date(p.date) <= new Date())
+		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 
 export const getPostBySlug = async (slug: string): Promise<Post | null> => {
@@ -48,12 +38,12 @@ export const getPostBySlug = async (slug: string): Promise<Post | null> => {
 	const raw = fs.readFileSync(filePath, 'utf-8');
 	const { data, content } = matter(raw);
 
-	if (data.draft || new Date(data.publishedAt) > new Date()) return null;
+	if (data.draft || new Date(data.date) > new Date()) return null;
 
 	return {
 		slug,
 		title: data.title,
-		publishedAt: data.publishedAt,
+		date: data.date,
 		description: data.description || '',
 		image: data.image || null,
 		tags: data.tags || [],
@@ -81,7 +71,7 @@ export const getPaginatedPosts = async (
 		return {
 			slug,
 			title: data.title,
-			publishedAt: data.publishedAt,
+			date: data.date,
 			description: data.description || '',
 			image: data.image || null,
 			tags: data.tags || [],
@@ -91,8 +81,8 @@ export const getPaginatedPosts = async (
 	});
 
 	const filtered = allPosts
-		.filter((p) => !p.draft && new Date(p.publishedAt) <= new Date())
-		.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+		.filter((p) => !p.draft && new Date(p.date) <= new Date())
+		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 	const total = filtered.length;
 	const pages = Math.ceil(total / limit);

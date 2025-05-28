@@ -3,7 +3,7 @@ import { getPaginatedPosts } from '$lib/server/queries';
 
 export const load: PageServerLoad = async () => {
 	try {
-		const { posts } = await getPaginatedPosts(1, 5);
+		const { posts } = await getPaginatedPosts(1, 25);
 
 		if (!posts || posts.length === 0) {
 			return {
