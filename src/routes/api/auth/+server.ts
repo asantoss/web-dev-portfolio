@@ -1,28 +1,40 @@
-import { json } from '@sveltejs/kit';
-
-const CLIENT_ID = process.env.GITHUB_CLIENT_ID!;
-const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET!;
+import { AuthorizationCode } from 'simple-oauth2';
+import { redirect } from '@sveltejs/kit';
+import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
 
 export async function GET({ url }) {
-	const code = url.searchParams.get('code');
+	const provider = url.searchParams.get('provider');
+	const siteId = url.searchParams.get('site_id');
+	const scope = url.searchParams.get('scope') || 'repo';
 
-	if (!code) {
-		return json({ error: 'Missing code' }, { status: 400 });
+	if (provider !== 'github') {
+		return new Response('Unsupported provider', { status: 400 });
 	}
 
-	const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
-		method: 'POST',
-		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/x-www-form-urlencoded'
+	if (!siteId) {
+		return new Response('Missing site_id', { status: 400 });
+	}
+
+	const client = new AuthorizationCode({
+		client: {
+			id: GITHUB_CLIENT_ID,
+			secret: GITHUB_CLIENT_SECRET
 		},
-		body: new URLSearchParams({
-			client_id: CLIENT_ID,
-			client_secret: CLIENT_SECRET,
-			code
-		})
+		auth: {
+			tokenHost: 'https://github.com',
+			authorizePath: '/login/oauth/authorize'
+		}
 	});
 
-	const tokenJson = await tokenRes.json();
-	return json(tokenJson);
+	const state = crypto.randomUUID();
+
+	const redirect_uri = `${siteId}/auth/callback?provider=${provider}&site_id=${encodeURIComponent(siteId)}`;
+
+	const authUrl = client.authorizeURL({
+		redirect_uri,
+		scope,
+		state
+	});
+
+	throw redirect(302, authUrl);
 }

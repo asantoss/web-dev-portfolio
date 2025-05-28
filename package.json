@@ -33,6 +33,7 @@
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.4",
 		"@types/node": "^22",
+		"@types/simple-oauth2": "^5.0.7",
 		"drizzle-kit": "^0.30.2",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
@@ -64,7 +65,8 @@
 		"groq": "^3.90.0",
 		"marked": "^15.0.12",
 		"openai": "^4.103.0",
-		"sharp": "^0.34.2"
+		"sharp": "^0.34.2",
+		"simple-oauth2": "^5.1.0"
 	},
 	"engines": {
 		"node": ">=18.18.0"
