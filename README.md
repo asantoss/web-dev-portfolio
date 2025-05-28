@@ -1,4 +1,5 @@
 # Web Dev Portfolio
+[![Production Deploy](https://github.com/asantoss/web-dev-portfolio/actions/workflows/build.yml/badge.svg)](https://github.com/asantoss/web-dev-portfolio/actions/workflows/build.yml)
 
 This is a personal portfolio project built with [SvelteKit](https://kit.svelte.dev/). It showcases my web development skills, projects, and experience.
 
