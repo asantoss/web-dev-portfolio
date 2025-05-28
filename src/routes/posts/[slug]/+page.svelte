@@ -13,7 +13,7 @@
 	<header class="flex flex-col gap-y-2">
 		<h1 class="text-2xl leading-tight font-semibold">{post.title}</h1>
 		<p class="text-sm text-gray-500">
-			{new Date(post.publishedAt).toLocaleDateString(undefined, {
+			{new Date(post.date).toLocaleDateString(undefined, {
 				year: 'numeric',
 				month: 'long',
 				day: 'numeric'
