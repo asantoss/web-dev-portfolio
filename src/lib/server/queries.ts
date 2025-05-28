@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import type { Post } from '../../types/cms';
-
+import type { SiteConfig } from '../../types/config';
 const postsDir = path.resolve('src/posts');
 
 export const getAllPosts = async (): Promise<Post[]> => {
@@ -94,4 +94,36 @@ export const getPaginatedPosts = async (
 		pages,
 		currentPage: page
 	};
+};
+
+const configPath = path.resolve('src/config/site.json');
+
+export const getSiteConfig = (): SiteConfig => {
+	try {
+		const configFile = fs.readFileSync(configPath, 'utf-8');
+		return JSON.parse(configFile) as SiteConfig;
+	} catch (error) {
+		console.error('Error loading site config:', error);
+		// Return default config if file doesn't exist
+		return {
+			personal: {
+				name: 'Alexander Santos',
+				title: 'Software Consultant',
+				email: 'asantos@lightningleap.us',
+				profileImage: '/profile.png',
+				profileImageAlt: 'Profile image'
+			},
+			bio: {
+				content: 'Default bio content...'
+			},
+			social: {},
+			skills: [],
+			metadata: {
+				title: 'Alexander Santos',
+				description: 'Personal portfolio and blog',
+				url: 'https://alexsantos.dev',
+				copyright: 'All rights reserved.'
+			}
+		};
+	}
 };

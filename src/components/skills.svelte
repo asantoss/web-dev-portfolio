@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import type { SiteConfig } from '../types/config';
 	import Nextjs from '../lib/icons/nextjs.svelte';
 	import Tailwind from '../lib/icons/tailwind.svelte';
 	import Expo from '../lib/icons/expo.svelte';
@@ -7,7 +8,26 @@
 	import Svelte from '../lib/icons/svelte.svelte';
 	import Salesforce from '../lib/icons/salesforce.svelte';
 	import Azure from '../lib/icons/azure.svelte';
+	import Vercel from '../lib/icons/vercel.svelte';
 	import Skill from '../components/skill.svelte';
+
+	let { config }: { config: SiteConfig } = $props();
+
+	// Map icon names to components
+	const iconMap = {
+		nextjs: Nextjs,
+		tailwind: Tailwind,
+		expo: Expo,
+		react: React,
+		vue: Vue,
+		svelte: Svelte,
+		salesforce: Salesforce,
+		azure: Azure,
+		vercel: Vercel
+	} as Record<string, typeof Nextjs>;
+
+	// Sort skills by order
+	const sortedSkills = config.skills.sort((a, b) => a.order - b.order);
 </script>
 
 <div class="flex h-10 items-center text-base">
@@ -17,28 +37,10 @@
 	<div class="bg-border h-0.25 w-full"></div>
 </div>
 <div class="grid grid-cols-4 place-content-between gap-10 py-3 sm:grid-cols-6">
-	<Skill title="Svelte">
-		<Svelte />
-	</Skill>
-	<Skill title="Vue">
-		<Vue />
-	</Skill>
-	<Skill title="React">
-		<React />
-	</Skill>
-	<Skill title="Next.js">
-		<Nextjs />
-	</Skill>
-	<Skill title="Tailwind CSS">
-		<Tailwind />
-	</Skill>
-	<Skill title="Expo">
-		<Expo />
-	</Skill>
-	<Skill title="Salesforce">
-		<Salesforce />
-	</Skill>
-	<Skill title="Azure">
-		<Azure />
-	</Skill>
+	{#each sortedSkills as skill}
+		{@const Icon = iconMap[skill.icon]}
+		<Skill title={skill.name}>
+			<Icon />
+		</Skill>
+	{/each}
 </div>

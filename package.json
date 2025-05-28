@@ -51,6 +51,7 @@
 		"vitest": "^3.0.0"
 	},
 	"dependencies": {
+		"@icons-pack/svelte-simple-icons": "^5.0.0",
 		"@portabletext/svelte": "^3.0.0",
 		"@sanity/client": "^7.3.0",
 		"@sveltejs/adapter-node": "^5.2.12",
@@ -62,6 +63,7 @@
 		"marked": "^15.0.12",
 		"openai": "^4.103.0",
 		"sharp": "^0.34.2",
+		"simple-icons": "^14.15.0",
 		"simple-oauth2": "^5.1.0"
 	},
 	"engines": {

@@ -1,5 +1,22 @@
-<script>
-	const email = 'asantos@lightningleap.us';
+<script lang="ts">
+	import type { SiteConfig } from '../types/config';
+	import { marked } from 'marked';
+	import { SiGithub, SiX, SiBluesky, SiGmail } from '@icons-pack/svelte-simple-icons';
+	import Linkedin from '$lib/icons/linkedin.svelte';
+	let { config }: { config: SiteConfig } = $props();
+	const { personal, bio, social } = config;
+
+	// Convert markdown to HTML for bio content
+	const bioHtml = marked(bio.content);
+
+	// Filter out empty social links and create array for display
+	const socialLinks = [
+		{ name: 'GitHub', url: social.github, icon: SiGithub },
+		{ name: 'LinkedIn', url: social.linkedin, icon: Linkedin },
+		{ name: 'Bluesky', url: social.bluesky, icon: SiBluesky },
+		{ name: 'Twitter', url: social.twitter, icon: SiX },
+		{ name: 'Email', url: `mailto:${personal.email}`, icon: SiGmail }
+	].filter((link) => link.url && link.url.trim() !== '');
 </script>
 
 <div class="flex h-10 items-center text-base"><h2 class="leading-normal">About me</h2></div>
@@ -7,19 +24,24 @@
 	<div class="bg-border h-0.25 w-full"></div>
 </div>
 <div class="py-2 text-sm">
-	<p class="leading-normal">
-		Hello! I'm Alexander Santos, a passionate software consultant who loves building creative
-		solutions. I enjoy tinkering with hardware, exploring new web frameworks, and have experience in
-		Salesforce development and administration. Whether it's coding, configuring systems, or
-		experimenting with the latest tech, I'm always eager to learn and take on new challenges.<br
-		/>Feel free to reach out to
-		<span class="inline-flex items-center gap-1"
-			><a
-				href="mailto:{email}"
-				class="inline-flex w-fit cursor-pointer items-center justify-center gap-2 text-sm font-semibold underline duration-300 hover:underline"
-				>me</a
-			></span
-		>
-		if you have any questions or just want to chat.
-	</p>
+	<div class="prose prose-sm dark:prose-invert leading-normal">
+		{@html bioHtml}
+	</div>
+
+	{#if socialLinks.length > 0}
+		<div class="mt-4 flex flex-wrap items-center gap-3 leading-normal">
+			{#each socialLinks as link}
+				<a
+					href={link.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="00 inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/20 dark:hover:text-blue-300"
+					aria-label="{link.name} profile"
+				>
+					<link.icon />
+					{link.name}
+				</a>
+			{/each}
+		</div>
+	{/if}
 </div>

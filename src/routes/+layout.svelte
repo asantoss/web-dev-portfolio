@@ -1,8 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 	import ThemeToggle from '../components/theme-toggle.svelte';
+	import type { LayoutData } from './$types';
 
-	let { children } = $props();
+	let { children, data }: { children: any; data: LayoutData } = $props();
 	import { onMount } from 'svelte';
 	import { themeStore } from '$lib/stores/theme';
 
@@ -10,6 +11,7 @@
 		themeStore.set(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
 	});
 	const year = new Date().getFullYear();
+	const { config } = data;
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +21,8 @@
 	rel="stylesheet"
 />
 <svelte:head>
-	<title>Alexander Santos</title>
+	<title>{config.metadata.title}</title>
+	<meta name="description" content={config.metadata.description} />
 </svelte:head>
 <ThemeToggle />
 <main
@@ -29,6 +32,6 @@
 		{@render children()}
 	</div>
 	<footer class=" mt-32 flex h-16 flex-col justify-center text-center text-xs leading-normal">
-		© {year}. All rights reserved.
+		© {year}. {config.metadata.copyright}
 	</footer>
 </main>

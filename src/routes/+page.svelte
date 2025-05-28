@@ -4,14 +4,15 @@
 	import Bio from '../components/bio.svelte';
 	import Skills from '../components/skills.svelte';
 	let { data } = $props();
+	const { config } = data;
 </script>
 
 <div class="flex flex-col gap-10">
 	<header class="flex flex-col gap-y-2">
-		<Profile />
+		<Profile {config} />
 	</header>
 	<section class="flex flex-col gap-y-2">
-		<Bio />
+		<Bio {config} />
 	</section>
 	<section class="flex flex-col gap-y-2">
 		<a href="/posts" class="flex h-10 items-center text-base hover:underline">
@@ -24,6 +25,6 @@
 		</div>
 	</section>
 	<section class="flex flex-col gap-y-2">
-		<Skills />
+		<Skills {config} />
 	</section>
 </div>
