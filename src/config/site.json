@@ -1,68 +1,68 @@
 {
-    "personal": {
-        "name": "Alexander Santos",
-        "title": "Software Consultant",
-        "email": "asantos@lightningleap.us",
-        "profileImage": "/profile.png",
-        "profileImageAlt": "alex and his daughter"
+  "personal": {
+    "name": "Alexander Santos",
+    "title": "Software Consultant",
+    "email": "asantos@lightningleap.us",
+    "profileImage": "/profile.png",
+    "profileImageAlt": "alex and his daughter"
+  },
+  "bio": {
+    "content": "Hello! I'm Alexander Santos, a passionate software consultant who loves building creative solutions. I enjoy tinkering with hardware, exploring new web frameworks, and have experience in Salesforce development and administration. Whether it's coding, configuring systems, or experimenting with the latest tech, I'm always eager to learn and take on new challenges.\n\nFeel free to reach out to me if you have any questions or just want to chat."
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/in/asantoss96",
+    "github": "https://github.com/asantoss",
+    "twitter": "",
+    "bluesky": "https://bsky.app/profile/asantos96.bsky.social",
+    "website": "http://alexsantos.dev"
+  },
+  "skills": [
+    {
+      "name": "Svelte",
+      "icon": "svelte",
+      "order": 1
     },
-    "bio": {
-        "content": "Hello! I'm Alexander Santos, a passionate software consultant who loves building creative solutions. I enjoy tinkering with hardware, exploring new web frameworks, and have experience in Salesforce development and administration. Whether it's coding, configuring systems, or experimenting with the latest tech, I'm always eager to learn and take on new challenges.\n\nFeel free to reach out to me if you have any questions or just want to chat."
+    {
+      "name": "Vue",
+      "icon": "vue",
+      "order": 2
     },
-    "social": {
-        "linkedin": "https://linkedin.com/in/asantoss96",
-        "github": "https://github.com/asantoss",
-        "twitter": "",
-        "bluesky": "",
-        "website": "http://alexsantos.dev"
+    {
+      "name": "React",
+      "icon": "react",
+      "order": 3
     },
-    "skills": [
-        {
-            "name": "Svelte",
-            "icon": "svelte",
-            "order": 1
-        },
-        {
-            "name": "Vue",
-            "icon": "vue",
-            "order": 2
-        },
-        {
-            "name": "React",
-            "icon": "react",
-            "order": 3
-        },
-        {
-            "name": "Next.js",
-            "icon": "nextjs",
-            "order": 4
-        },
-        {
-            "name": "Tailwind CSS",
-            "icon": "tailwind",
-            "order": 5
-        },
-        {
-            "name": "Expo",
-            "icon": "expo",
-            "order": 6
-        },
-        {
-            "name": "Salesforce",
-            "icon": "salesforce",
-            "order": 7
-        },
-        {
-            "name": "Azure",
-            "icon": "azure",
-            "order": 8
-        }
-    ],
-    "metadata": {
-        "title": "Alexander Santos",
-        "description": "Personal portfolio and blog of Alexander Santos, a passionate software consultant specializing in modern web development and Salesforce solutions.",
-        "url": "https://alexsantos.dev",
-        "copyright": "All rights reserved.",
-        "ogImage": "/og-default.png"
+    {
+      "name": "Next.js",
+      "icon": "nextjs",
+      "order": 4
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "tailwind",
+      "order": 5
+    },
+    {
+      "name": "Expo",
+      "icon": "expo",
+      "order": 6
+    },
+    {
+      "name": "Salesforce",
+      "icon": "salesforce",
+      "order": 7
+    },
+    {
+      "name": "Azure",
+      "icon": "azure",
+      "order": 8
     }
+  ],
+  "metadata": {
+    "title": "Alexander Santos",
+    "description": "Personal portfolio and blog of Alexander Santos, a passionate software consultant specializing in modern web development and Salesforce solutions.",
+    "url": "https://alexsantos.dev",
+    "ogImage": "/og-default.png",
+    "copyright": "All rights reserved."
+  }
 }
