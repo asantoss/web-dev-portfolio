@@ -1,6 +1,6 @@
 ---
-title: Salesforce Developer
-description: Read this blog post!
+title: My First Blog
+description: Welcome to my site, this site is built using Svelte & Sveltiq CMS
 image: /images/hello.png
 draft: false
 optional: ''
