@@ -13,12 +13,21 @@ export interface SiteConfig {
 		linkedin?: string;
 		github?: string;
 		twitter?: string;
-		website?: string;
 		bluesky?: string;
+		website?: string;
 	};
 	skills: {
 		name: string;
-		icon: string;
+		icon:
+			| 'svelte'
+			| 'vue'
+			| 'react'
+			| 'nextjs'
+			| 'tailwind'
+			| 'expo'
+			| 'salesforce'
+			| 'azure'
+			| 'vercel';
 		order: number;
 	}[];
 	metadata: {
@@ -26,5 +35,6 @@ export interface SiteConfig {
 		description: string;
 		url: string;
 		copyright: string;
+		ogImage?: string;
 	};
 }

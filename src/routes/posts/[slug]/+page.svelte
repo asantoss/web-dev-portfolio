@@ -1,13 +1,28 @@
 <script lang="ts">
+	import OgMeta from '../../../components/og-meta.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
-	const { post } = data;
+	const { post, config } = data;
+
+	// Format dates for OG tags
+	const publishedTime = new Date(post.date).toISOString();
+	const postUrl = `${config.metadata.url}/posts/${post.slug}`;
 </script>
 
-<svelte:head>
-	<title>{post.title}</title>
-	<meta name="description" content={post.description ?? post.title} />
-</svelte:head>
+<!-- Article-specific OG tags -->
+<OgMeta
+	title={post.title}
+	description={post.description ?? `${post.title} - ${config.personal.name}`}
+	image={post.image}
+	url={postUrl}
+	type="article"
+	{config}
+	article={{
+		publishedTime,
+		author: config.personal.name,
+		tags: post.tags
+	}}
+/>
 
 <div class="font-lexend mx-auto flex max-w-xl flex-col gap-y-8 px-4">
 	<a

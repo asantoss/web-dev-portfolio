@@ -60,9 +60,9 @@ collections:
             widget: object
             fields:
               - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
-              - { label: Bluesky URL, name: bluesky, widget: string, required: false }
               - { label: GitHub URL, name: github, widget: string, required: false }
               - { label: Twitter URL, name: twitter, widget: string, required: false }
+              - { label: Bluesky URL, name: bluesky, widget: string, required: false }
               - { label: Website URL, name: website, widget: string, required: false }
 
           - label: Skills & Technologies
@@ -85,4 +85,5 @@ collections:
               - { label: Site Title, name: title, widget: string }
               - { label: Site Description, name: description, widget: text }
               - { label: Site URL, name: url, widget: string }
+              - { label: Default OG Image, name: ogImage, widget: image, required: false }
               - { label: Copyright Text, name: copyright, widget: string }

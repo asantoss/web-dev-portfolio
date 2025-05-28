@@ -12,8 +12,8 @@
     "social": {
         "linkedin": "https://linkedin.com/in/asantoss96",
         "github": "https://github.com/asantoss",
-        "bluesky": "https://bsky.app/profile/asantos96.bsky.social",
         "twitter": "",
+        "bluesky": "",
         "website": "http://alexsantos.dev"
     },
     "skills": [
@@ -62,6 +62,7 @@
         "title": "Alexander Santos",
         "description": "Personal portfolio and blog of Alexander Santos, a passionate software consultant specializing in modern web development and Salesforce solutions.",
         "url": "https://alexsantos.dev",
-        "copyright": "All rights reserved."
+        "copyright": "All rights reserved.",
+        "ogImage": "/og-default.png"
     }
 }

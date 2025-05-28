@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import ThemeToggle from '../components/theme-toggle.svelte';
+	import OGMeta from '../components/og-meta.svelte';
 	import type { LayoutData } from './$types';
 
 	let { children, data }: { children: any; data: LayoutData } = $props();
@@ -20,10 +21,10 @@
 	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
 	rel="stylesheet"
 />
-<svelte:head>
-	<title>{config.metadata.title}</title>
-	<meta name="description" content={config.metadata.description} />
-</svelte:head>
+
+<!-- Default OG tags for the site -->
+<OGMeta {config} />
+
 <ThemeToggle />
 <main
 	class="font-lexend flex min-h-screen flex-col items-center bg-gray-100 px-4 pt-8 leading-relaxed text-gray-900 transition-colors duration-300 md:pt-16 dark:bg-black dark:text-gray-200"

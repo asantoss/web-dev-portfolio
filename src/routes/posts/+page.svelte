@@ -5,9 +5,6 @@
 	let { data }: PageProps = $props();
 </script>
 
-<svelte:head>
-	<title>Alexander Santos</title>
-</svelte:head>
 <div class="flex flex-col gap-10">
 	<a
 		href="/"
