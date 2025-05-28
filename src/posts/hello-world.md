@@ -7,7 +7,7 @@ optional: ''
 tags:
   - general
   - intro
-date: 2025-05-28T00:11:00
+date: 2025-05-28T09:21:00
 ---
 Welcome to my new blog powered by Decap CMS and SvelteKit!
 This is my first post, and I'm excited to share my journey with you. Stay tuned for more updates and insights!
