@@ -54,6 +54,7 @@ export const GET: RequestHandler = async ({ url }) => {
 	try {
 		const accessToken = await client.getToken(tokenParams);
 		const token = accessToken.token['access_token'];
+		console.log(accessToken);
 
 		const body = renderBody('success', token as string);
 		return new Response(body, {
