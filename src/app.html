@@ -3,8 +3,21 @@
 
 <head>
 	<meta charset="utf-8" />
+	<meta name="color-scheme" content="dark light" />
+
 	<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script>
+		// Inline to avoid FOUC
+		(function () {
+			const stored = localStorage.getItem('theme');
+			const system = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (stored === 'dark' || (!stored && system)) {
+				document.documentElement.classList.add('dark');
+			}
+		})();
+	</script>
+
 	%sveltekit.head%
 </head>
 

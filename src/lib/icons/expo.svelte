@@ -1,6 +1,6 @@
 <span>
 	<svg
-		fill="#000000"
+		fill="currentColor"
 		width="40px"
 		height="40px"
 		viewBox="0 0 32 32"

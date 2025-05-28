@@ -7,3 +7,4 @@
 
 	--color-border: var(--color-neutral-200);
 }
+@custom-variant dark (&:where(.dark, .dark *));

@@ -63,10 +63,12 @@
 		"drizzle-orm": "^0.40.0",
 		"gray-matter": "^4.0.3",
 		"groq": "^3.90.0",
+		"lucide-svelte": "^0.511.0",
 		"marked": "^15.0.12",
 		"openai": "^4.103.0",
 		"sharp": "^0.34.2",
-		"simple-oauth2": "^5.1.0"
+		"simple-oauth2": "^5.1.0",
+		"svelte-motion": "^0.12.2"
 	},
 	"engines": {
 		"node": ">=18.18.0"
