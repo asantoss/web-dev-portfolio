@@ -9,10 +9,12 @@ A modern, full-stack personal portfolio and blog built with SvelteKit. This proj
 ## ✨ Features
 
 - **Modern SvelteKit Frontend** - Fast, reactive UI with server-side rendering
+- **Dynamic Configuration** - Centralized site settings managed through CMS
 - **Content Management** - Blog posts with markdown support and frontmatter
 - **Dark/Light Theme** - Automatic system preference detection with manual toggle
-- **Admin Interface** - Sveltia CMS integration for content management
+- **Admin Interface** - Sveltia CMS integration for content and settings management
 - **OAuth Authentication** - GitHub OAuth for secure admin access
+- **Social Media Integration** - Dynamic social links with brand icons
 - **Image Processing** - Dynamic image optimization with Sharp
 - **Responsive Design** - Mobile-first approach with Tailwind CSS
 - **Type Safety** - Full TypeScript implementation
@@ -27,6 +29,7 @@ A modern, full-stack personal portfolio and blog built with SvelteKit. This proj
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Lucide Svelte](https://lucide.dev/)** - Beautiful SVG icons
+- **[@icons-pack/svelte-simple-icons](https://github.com/icons-pack/svelte-simple-icons)** - Brand icons for social media
 
 ### Backend & Content
 - **[Node.js](https://nodejs.org/)** - Server runtime
@@ -85,14 +88,31 @@ A modern, full-stack personal portfolio and blog built with SvelteKit. This proj
    GITHUB_CLIENT_SECRET=your_github_oauth_client_secret
    ```
 
-4. **Run the development server:**
+4. **Configure your site settings:**
+   
+   The site configuration is stored in `src/config/site.json`. You can either:
+   - Edit this file directly with your personal information
+   - Use the admin interface at `/admin` after setting up OAuth
+
+5. **Run the development server:**
    ```bash
    npm run dev
    ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser.
+6. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## 📝 Content Management
+
+### Site Configuration
+All personal information, social links, skills, and site metadata are managed through a centralized configuration system:
+
+- **Personal Information**: Name, title, email, profile image
+- **Bio Content**: Rich markdown content with automatic rendering
+- **Social Links**: GitHub, LinkedIn, Twitter/X, Bluesky, website, email
+- **Skills & Technologies**: Dynamic skill showcase with custom icons
+- **Site Metadata**: SEO-friendly titles, descriptions, and copyright info
+
+Configuration is stored in `src/config/site.json` and can be edited through the Sveltia CMS admin interface.
 
 ### Creating Posts
 Posts are stored as Markdown files in `src/posts/` with frontmatter:
@@ -111,7 +131,11 @@ Your markdown content here...
 ```
 
 ### Admin Interface
-Access the admin panel at `/admin` to manage content through the Sveltia CMS interface. Authentication is handled via GitHub OAuth.
+Access the admin panel at `/admin` to manage content and site settings through the Sveltia CMS interface. Authentication is handled via GitHub OAuth.
+
+**Available Admin Sections:**
+- **Posts**: Create, edit, and manage blog posts
+- **Site Settings**: Update personal information, bio, social links, skills, and metadata
 
 ## 🛠️ Available Scripts
 
@@ -139,14 +163,41 @@ src/
 ├── app.html              # HTML template
 ├── app.css               # Global styles
 ├── components/           # Reusable components
+├── config/               # Site configuration
+│   └── site.json        # Centralized site settings
 ├── lib/
 │   ├── icons/           # SVG icon components
 │   ├── server/          # Server-side utilities
+│   │   ├── config.ts    # Configuration loader
+│   │   └── queries.ts   # Data fetching utilities
 │   └── stores/          # Svelte stores
 ├── posts/               # Markdown blog posts
 ├── routes/              # SvelteKit routes
 └── types/               # TypeScript type definitions
+    └── config.d.ts      # Configuration type definitions
 ```
+
+## 🎨 Customization
+
+### Personalizing Your Portfolio
+
+1. **Update Site Configuration**: Edit `src/config/site.json` or use the admin interface at `/admin`
+2. **Add Your Profile Image**: Place your profile image in the `static/` directory
+3. **Configure Social Links**: Add your social media profiles in the site settings
+4. **Customize Skills**: Update the skills section with your technologies and tools
+5. **Write Your Bio**: Craft your personal bio using Markdown for rich formatting
+
+### Adding New Skills
+
+Skills are dynamically rendered based on your configuration. To add a new skill:
+
+1. Add the skill to your `site.json` configuration
+2. Create an icon component in `src/lib/icons/` if needed
+3. Update the icon mapping in the Skills component
+
+### Theme Customization
+
+The site supports both light and dark themes with automatic system preference detection. Customize colors in `src/app.css` using Tailwind's theme configuration.
 
 ## 🚀 Deployment
 
@@ -160,6 +211,10 @@ The deployment process:
 1. Push to main branch triggers GitHub Action
 2. Action builds and pushes Docker image
 3. Coolify deploys the updated container
+
+### Configuration Management
+
+Site configuration changes made through the CMS are automatically committed to your repository, triggering a new deployment. This ensures your changes are version-controlled and deployed consistently.
 
 ## 🤝 Contributing
 
