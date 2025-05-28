@@ -18,6 +18,6 @@
 	rel="stylesheet"
 />
 <ThemeToggle />
-<main class="flex min-h-screen flex-col transition-colors duration-300 items-center px-4 pt-8 leading-relaxed md:pt-16 bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-200">
+<main class="flex min-h-screen flex-col transition-colors duration-300 items-center px-4 pt-8 leading-relaxed md:pt-16 bg-gray-100 text-gray-900 dark:bg-black dark:text-gray-200">
 	{@render children()}
 </main>
