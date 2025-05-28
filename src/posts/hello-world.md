@@ -3,7 +3,7 @@ title: Hello World
 publishedAt: 2024-05-01
 description: My first post
 tags: [general, intro]
-image: /images/hello.jpg
+image: /images/hello.png
 draft: false
 ---
 
