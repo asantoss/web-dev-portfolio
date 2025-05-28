@@ -7,6 +7,7 @@ function renderBody(status: string, token?: string): string {
 	return `
 		<script>
 			const receiveMessage = (message) => {
+			debugger;
 				window.opener.postMessage(
 					'authorization:github:${status}:${JSON.stringify({ token })}',
 					message.origin
