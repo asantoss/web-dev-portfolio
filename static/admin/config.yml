@@ -2,7 +2,7 @@ backend:
   name: github
   repo: asantoss/web-dev-portfolio
   branch: main
-  base_url: https://alexsantos.dev
+  base_url: https://alexsantos.dev/api
   site_domain: https://alexsantos.dev
 
 media_folder: 'src/images'
