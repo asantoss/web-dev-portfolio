@@ -1,9 +1,19 @@
 <script lang="ts">
 	import PostCard from '../../components/post-card.svelte';
+	import OGMeta from '../../components/og-meta.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+	const { config } = data;
 </script>
+
+<OGMeta
+	title={`Posts - ${config.personal.name}`}
+	description={`Articles and insights by ${config.personal.name}`}
+	url={`${config.metadata.url}/posts`}
+	{config}
+	type="website"
+/>
 
 <div class="flex flex-col gap-10">
 	<a
