@@ -364,7 +364,7 @@ function UserStats() {
 								<div class="line-num">{i + 1}</div>
 							{/each}
 						</div>
-						<pre class="code-area"><code>{highlightedCode}<span class="cursor">▋</span></code></pre>
+						<pre class="code-area"><code>{@html highlightedCode}<span class="cursor">▋</span></code></pre>
 					</div>
 				</div>
 				{#if s === 4}
@@ -431,7 +431,7 @@ function UserStats() {
 
 	<!-- Stage indicator -->
 	<div class="stage-dots">
-		{#each LABELS as _label, i (i)}
+		{#each { length: LABELS.length } as _label, i (i)}
 			<div class="dot" class:dot-active={stage === i}></div>
 		{/each}
 	</div>
