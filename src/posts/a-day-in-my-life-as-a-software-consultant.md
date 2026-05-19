@@ -1,7 +1,7 @@
 ---
 title: A Day in My Life as a Software Consultant
 description: A look at what a typical day actually looks like when you're managing and building software across multiple clients.
-image: /images/developer.avif
+image: https://media.alexsantos.dev/uploads/developer.webp
 draft: true
 presentation: true
 tags:
