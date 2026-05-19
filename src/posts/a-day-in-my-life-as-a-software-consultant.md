@@ -88,6 +88,19 @@ This is the block I protect at all costs.
 
 ***
 
+## From Request to Code
+
+<iframe
+  src="/animations/dev-workflow"
+  width="1100"
+  height="520"
+  style="border: none; border-radius: 8px; display: block; margin: 0 auto;"
+  title="Dev workflow animation"
+  loading="lazy"
+></iframe>
+
+***
+
 ## Protecting Focus Time
 
 No meetings 10–12. In theory.
