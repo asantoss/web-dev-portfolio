@@ -6,10 +6,19 @@ backend:
   site_domain: https://alexsantos.dev/api
   automatic_deployments: false
 
-media_folder: 'src/images'
 public_folder: '/images'
 
 media_libraries:
+  all:
+  slugify_filename: true
+  transformations:
+    raster_image: # original format
+      format: webp # new format, only `webp` is supported
+      quality: 85 # default: 85
+      width: 2048 # default: original size
+      height: 2048 # default: original size
+    svg:
+      optimize: true
   cloudflare_r2:
     access_key_id: YOUR_R2_ACCESS_KEY_ID
     bucket: portfolio
