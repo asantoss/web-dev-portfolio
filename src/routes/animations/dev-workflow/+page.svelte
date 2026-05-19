@@ -217,7 +217,7 @@ function UserStats() {
 	}
 
 	// ── Stage machine ──────────────────────────────────────────────────────────
-	const STAGE_DURATIONS = [3500, 4200, 0, 0, 0, 3800]; // 0 = typewriter-driven
+	const STAGE_DURATIONS = [7000, 8000, 0, 0, 0, 7000]; // 0 = typewriter-driven
 
 	function runStage(s: number) {
 		clearAll();
@@ -238,7 +238,7 @@ function UserStats() {
 				count++;
 				reqItems = count;
 				if (count >= REQS.length) cancelIv(iv);
-			}, 700);
+			}, 1200);
 			later(() => runStage(2), STAGE_DURATIONS[1]);
 		} else if (s === 2) {
 			// Data layer: useStats hook
@@ -523,7 +523,7 @@ function UserStats() {
 	}
 	.chat-msg.delay-in {
 		opacity: 0;
-		animation: fadeUp 0.4s ease 1s forwards;
+		animation: fadeUp 0.4s ease 2s forwards;
 	}
 	.chat-msg.dev {
 		flex-direction: row-reverse;
