@@ -9,6 +9,14 @@ backend:
 media_folder: 'src/images'
 public_folder: '/images'
 
+media_libraries:
+  cloudflare_r2:
+    access_key_id: YOUR_R2_ACCESS_KEY_ID
+    bucket: YOUR_R2_BUCKET_NAME
+    account_id: YOUR_CLOUDFLARE_ACCOUNT_ID
+    public_url: YOUR_R2_PUBLIC_URL
+    prefix: 'uploads/'
+
 search: false
 
 slug:
