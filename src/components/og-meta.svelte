@@ -70,7 +70,7 @@
 			<meta property="article:author" content={article.author} />
 		{/if}
 		{#if article.tags && article.tags.length > 0}
-			{#each article.tags as tag}
+			{#each article.tags as tag (tag)}
 				<meta property="article:tag" content={tag} />
 			{/each}
 		{/if}
