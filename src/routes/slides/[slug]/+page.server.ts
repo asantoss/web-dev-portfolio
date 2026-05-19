@@ -12,7 +12,16 @@ export const load: PageServerLoad = async ({ params }) => {
 	}
 
 	const rawSlides = post.content.split(/\n\*{3}\n|\n---\n/);
-	const slides = await Promise.all(rawSlides.map((s) => marked(s.trim())));
+	const slides = await Promise.all(
+		rawSlides.map(async (s) => {
+			const trimmed = s.trim();
+			const bgMatch = trimmed.match(/<!--\s*bg:\s*(.+?)\s*-->/);
+			const bg = bgMatch ? bgMatch[1] : undefined;
+			const clean = trimmed.replace(/<!--\s*bg:\s*.+?\s*-->\n?/, '');
+			const html = await marked(clean);
+			return { html, bg };
+		})
+	);
 
 	return {
 		title: post.title,

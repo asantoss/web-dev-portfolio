@@ -59,7 +59,10 @@
 	<div bind:this={deckEl} class="reveal">
 		<div class="slides">
 			{#each slides as slide}
-				<section>{@html slide}</section>
+				<section
+					data-background-image={slide.bg ?? undefined}
+					data-background-opacity={slide.bg ? '0.25' : undefined}
+				>{@html slide.html}</section>
 			{/each}
 		</div>
 	</div>
