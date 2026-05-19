@@ -42,6 +42,7 @@
 	<meta property="og:description" content={ogDescription} />
 	<meta property="og:image" content={ogImage} />
 	<meta property="og:site_name" content={config.personal.name} />
+	<meta property="og:logo" content={`${config.metadata.url}/logo.png`} />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
