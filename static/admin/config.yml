@@ -12,9 +12,9 @@ public_folder: '/images'
 media_libraries:
   cloudflare_r2:
     access_key_id: YOUR_R2_ACCESS_KEY_ID
-    bucket: YOUR_R2_BUCKET_NAME
-    account_id: YOUR_CLOUDFLARE_ACCOUNT_ID
-    public_url: YOUR_R2_PUBLIC_URL
+    bucket: portfolio
+    account_id: 841124c36ad8289a27b121b4d3783e30
+    public_url: https://media.alexsantos.dev
     prefix: 'uploads/'
 
 search: false
@@ -36,7 +36,14 @@ collections:
       - { label: Description, name: description, widget: text }
       - { label: Image, name: image, widget: image }
       - { label: Draft, name: draft, widget: boolean, default: true }
-      - { label: Presentation, name: presentation, widget: boolean, default: false, required: false, hint: 'Enable to allow this post to be viewed as a slide deck at /slides/[slug]' }
+      - {
+          label: Presentation,
+          name: presentation,
+          widget: boolean,
+          default: false,
+          required: false,
+          hint: 'Enable to allow this post to be viewed as a slide deck at /slides/[slug]'
+        }
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - { label: Tags, name: tags, widget: list, required: false, default: [] }
       - { label: Date, name: date, widget: datetime, default: 'today' }
