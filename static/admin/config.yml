@@ -52,7 +52,7 @@ collections:
           widget: boolean,
           default: false,
           required: false,
-          hint: 'Enable to allow this post to be viewed as a slide deck at /slides/[slug]'
+          hint: 'Enable to allow this post to be viewed as a slide deck at /slides/[slug]. Separate slides with a horizontal rule (***) on its own line.'
         }
       - { label: 'Content', name: 'body', widget: 'markdown' }
       - { label: Tags, name: tags, widget: list, required: false, default: [] }

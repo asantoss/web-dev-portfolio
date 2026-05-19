@@ -11,7 +11,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		throw error(404, 'Presentation not found');
 	}
 
-	const rawSlides = post.content.split(/\n---\n/);
+	const rawSlides = post.content.split(/\n\*{3}\n|\n---\n/);
 	const slides = await Promise.all(rawSlides.map((s) => marked(s.trim())));
 
 	return {
