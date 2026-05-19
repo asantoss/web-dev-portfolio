@@ -183,18 +183,67 @@ Before closing the laptop:
 
 ## The Reality Check
 
-Things that look like my job but aren't in the job description:
+Things that look like my job but aren't in the job description.
 
-- Being a rubber duck for junior devs
-  - This means being patient and knowing when to just listen vs. when to jump in with suggestions. It's a delicate balance, but it's crucial for team growth. Usually, just asking the right questions can help them find the solution on their own, which is way more empowering than just giving them the answer.
-- Explaining why "just add AI to it" isn't a sprint task
-  - This is a common misconception, especially with the hype around AI. People think it's a magic bullet that can solve all problems instantly, but in reality, integrating AI into a product is a complex project that requires careful planning, data preparation, and ongoing maintenance. It's not just about slapping an API on top of your existing codebase; it's about understanding the problem you're trying to solve and whether AI is the right tool for it.
-- Finding the political will to fix tech debt
-  - Tech debt is like that leaky roof — you know it needs to be fixed, but it's hard to get everyone on board because it's not a visible problem until it causes a flood. As a consultant, part of my job is to advocate for addressing tech debt before it becomes an emergency, which often means translating the technical risks into business risks that stakeholders can understand.
-- Staying calm when a client changes scope on Wednesday for a Friday deadline
-  - This is the ultimate test of a consultant's flexibility and communication skills. It's important to manage expectations and negotiate scope changes in a way that doesn't compromise the quality of the work or the sanity of the team. Sometimes, it means saying "no" or "not without additional resources," which can be uncomfortable but necessary for maintaining a sustainable pace.
-- The feedback pipeline, or "why didn't you tell me this sooner?"
-  - A common issue I run into is the "I would like for this to work better", without any actual details on what "better" means. This is a problem because it leaves me with no actionable information to work with, and it can lead to a lot of back-and-forth trying to clarify what the client actually wants. It's important for clients to provide specific feedback and for consultants to ask clarifying questions to ensure we're on the same page.
+***
+
+## 🦆 The Human Rubber Duck
+
+Junior devs need someone to think out loud with.
+
+- Listen first, suggest second
+- Ask the right questions — let them find the answer
+- Handing someone a solution is less valuable than helping them think
+
+> Empowering > answering.
+
+***
+
+## 🤖 "Just Add AI to It"
+
+Not a sprint task.
+
+- AI integrations need data prep, planning, and ongoing maintenance
+- "Slap an API on it" rarely solves the real problem
+- The hard question: **is AI even the right tool here?**
+
+> The hype is real. The complexity is realer.
+
+***
+
+## 🏚️ The Tech Debt Negotiation
+
+You know the roof is leaking. Getting everyone else to care is the job.
+
+- Tech debt is invisible until it floods
+- Translate technical risk → business risk
+- Advocate before it becomes an emergency
+
+> "We should fix this now" is easier than "we have to fix this now."
+
+***
+
+## 🔥 Scope Changes on Wednesday
+
+For a Friday deadline.
+
+- Stay calm — panic is contagious
+- Negotiate, don't just absorb
+- Sometimes the right answer is "not without additional resources"
+
+> Protecting the team's pace *is* part of the job.
+
+***
+
+## 💬 The Feedback Pipeline
+
+"I'd like this to work better." — *every client, at some point*
+
+- Vague feedback creates back-and-forth
+- Ask clarifying questions early and often
+- Push for specifics: what does "better" actually mean?
+
+> No actionable detail = no actionable fix.
 
 ***
 
