@@ -10,6 +10,7 @@ date: 2026-05-19T10:07:00
 ---
 
 <!-- bg: https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1920&q=80 -->
+
 # A Day in My Life
 
 ## as a Software Consultant
@@ -32,20 +33,21 @@ Managing software across multiple clients — no two days are the same.
 
 ## A Typical Day
 
-| Time     | Activity           |
-| -------- | ------------------ |
-| 8:00 AM  | Morning catchup    |
-| 9:00 AM  | Stand-ups          |
-| 10:00 AM | Deep work          |
-| 12:00 PM | Lunch (hopefully)  |
-| 1:00 PM  | Client calls       |
-| 3:00 PM  | Project management |
-| 4:30 PM  | More dev time      |
-| 5:30 PM  | Wrap-up            |
+| Time | Activity |
+| --- | --- |
+| 8:00 AM | Morning catchup |
+| 9:00 AM | Stand-ups |
+| 10:00 AM | Deep work |
+| 12:00 PM | Lunch (hopefully) |
+| 1:00 PM | Client calls |
+| 3:00 PM | Project management |
+| 4:30 PM | More dev time |
+| 5:30 PM | Wrap-up |
 
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 8:00 AM — Morning Catchup
 
 Coffee. Always coffee first.
@@ -59,6 +61,7 @@ Coffee. Always coffee first.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 9:00 AM — Stand-up Season
 
 Multiple projects = multiple stand-ups.
@@ -74,6 +77,7 @@ The art is keeping each one under 15 minutes.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 10:00 AM — Deep Work
 
 Finally. **Actual coding.**
@@ -97,6 +101,7 @@ In practice, people pop in to "just check if something is possible" — which is
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 11:30 AM — Code Reviews
 
 Before lunch, I try to clear the PR queue.
@@ -111,6 +116,7 @@ Before lunch, I try to clear the PR queue.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 12:00 PM — Lunch
 
 Ideally: step away from the screen.
@@ -125,6 +131,7 @@ Realistically: a client scheduled a call at noon.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 1:00 PM — Client Calls
 
 This is where consulting gets interesting.
@@ -151,6 +158,7 @@ The less glamorous but critical part.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 3:00 PM — Context Switching
 
 The reality of multi-project consulting:
@@ -168,6 +176,7 @@ The key skill isn't speed — it's **knowing what to switch to and when**.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 4:30 PM — More Dev Time
 
 Second wind. Back to the editor.
@@ -181,6 +190,7 @@ This is often my most productive coding hour — the meetings are done, the inbo
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 5:30 PM — Wrap-up
 
 Before closing the laptop:
@@ -195,6 +205,7 @@ Before closing the laptop:
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1920&q=80 -->
+
 ## The Reality Check
 
 Things that look like my job but aren't in the job description.
@@ -214,6 +225,7 @@ Junior devs need someone to think out loud with.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 🤖 "Just Add AI to It"
 
 Not a sprint task.
@@ -227,6 +239,7 @@ Not a sprint task.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80 -->
+
 ## 🏚️ The Tech Debt Negotiation
 
 You know the roof is leaking. Getting everyone else to care is the job.
@@ -247,13 +260,13 @@ For a Friday deadline.
 - Negotiate, don't just absorb
 - Sometimes the right answer is "not without additional resources"
 
-> Protecting the team's pace *is* part of the job.
+> Protecting the team's pace _is_ part of the job.
 
 ***
 
 ## 💬 The Feedback Pipeline
 
-"I'd like this to work better." — *every client, at some point*
+"I'd like this to work better." — _every client, at some point_
 
 - Vague feedback creates back-and-forth
 - Ask clarifying questions early and often
@@ -264,6 +277,7 @@ For a Friday deadline.
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80 -->
+
 ## The Best Parts
 
 Why I actually love this work:
@@ -278,6 +292,7 @@ Why I actually love this work:
 ***
 
 <!-- bg: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80 -->
+
 # Questions?
 
 Find me online or just ask — I'm happy to talk shop.
