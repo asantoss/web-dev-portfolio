@@ -13,8 +13,6 @@ date: 2026-05-19T10:07:00
 
 # A Day in My Life
 
-## as a Software Consultant
-
 **Spoiler: it's not all writing code**
 
 ***
