@@ -21,6 +21,7 @@ export const getAllPosts = async (): Promise<Post[]> => {
 			image: data.image || null,
 			tags: data.tags || [],
 			draft: data.draft || false,
+			presentation: data.presentation || false,
 			content
 		} satisfies Post;
 	});
@@ -48,6 +49,7 @@ export const getPostBySlug = async (slug: string): Promise<Post | null> => {
 		image: data.image || null,
 		tags: data.tags || [],
 		draft: data.draft || false,
+		presentation: data.presentation || false,
 		content
 	};
 };
@@ -76,6 +78,7 @@ export const getPaginatedPosts = async (
 			image: data.image || null,
 			tags: data.tags || [],
 			draft: data.draft || false,
+			presentation: data.presentation || false,
 			content
 		} satisfies Post;
 	});

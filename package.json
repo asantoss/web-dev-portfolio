@@ -33,6 +33,7 @@
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.4",
 		"@types/node": "^22",
+		"@types/reveal.js": "^5.2.2",
 		"@types/simple-oauth2": "^5.0.7",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
@@ -62,6 +63,7 @@
 		"lucide-svelte": "^0.511.0",
 		"marked": "^15.0.12",
 		"openai": "^4.103.0",
+		"reveal.js": "^6.0.1",
 		"sharp": "^0.34.2",
 		"simple-icons": "^14.15.0",
 		"simple-oauth2": "^5.1.0"

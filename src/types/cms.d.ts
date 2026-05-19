@@ -6,5 +6,6 @@ export interface Post {
 	image?: string;
 	tags?: string[];
 	draft?: boolean;
+	presentation?: boolean;
 	content: string;
 }

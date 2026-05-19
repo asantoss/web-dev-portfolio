@@ -4,16 +4,26 @@
 	export let post: Post;
 </script>
 
-<a
-	href={`/posts/${post.slug}`}
+<div
 	class="group bg-surface relative flex flex-col gap-2 overflow-hidden rounded-xl border p-2 opacity-100 hover:outline-2"
 >
-	<div class="flex items-center justify-between">
+	<!-- stretch link covers the whole card -->
+	<a href={`/posts/${post.slug}`} class="absolute inset-0 z-0" aria-label={post.title}></a>
+
+	<div class="relative z-10 flex items-center justify-between">
 		<h3 class="flex items-center px-2 py-1 text-sm font-semibold capitalize">
 			{post.title}
 		</h3>
 		<div class="flex items-center justify-center gap-2 rounded p-2 text-xs">
-			<span class=" text-gray-500 dark:text-gray-400">
+			{#if post.presentation}
+				<a
+					href={`/slides/${post.slug}`}
+					class="rounded bg-blue-500/10 px-2 py-0.5 text-xs font-medium text-blue-500 transition hover:bg-blue-500/20"
+				>
+					Slides
+				</a>
+			{/if}
+			<span class="text-gray-500 dark:text-gray-400">
 				{new Date(post.date).toLocaleDateString()}
 			</span>
 			<svg
@@ -40,4 +50,4 @@
 			{post.description ?? 'No description provided.'}
 		</p>
 	</div>
-</a>
+</div>
