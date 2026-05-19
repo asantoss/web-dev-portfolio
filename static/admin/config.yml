@@ -11,15 +11,15 @@ media_folder: 'src/images'
 
 media_libraries:
   all:
-  slugify_filename: true
-  transformations:
-    raster_image: # original format
-      format: webp # new format, only `webp` is supported
-      quality: 85 # default: 85
-      width: 2048 # default: original size
-      height: 2048 # default: original size
-    svg:
-      optimize: true
+    slugify_filename: true
+    transformations:
+      raster_image: # original format
+        format: webp # new format, only `webp` is supported
+        quality: 85 # default: 85
+        width: 2048 # default: original size
+        height: 2048 # default: original size
+      svg:
+        optimize: true
   cloudflare_r2:
     access_key_id: a39ed05d5935aa25e066693ae6dce7b4
     bucket: portfolio
