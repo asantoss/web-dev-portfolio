@@ -12,6 +12,7 @@
 		let deck: any = null;
 
 		document.body.style.overflow = 'hidden';
+		document.documentElement.style.overflow = 'hidden';
 
 		(async () => {
 			await import('reveal.js/reveal.css');
@@ -25,12 +26,16 @@
 				transition: 'slide',
 				backgroundTransition: 'fade',
 				controls: true,
+				controlsTutorial: true,
 				progress: true,
 				center: true,
 				slideNumber: 'c/t',
+				touch: true,
 				width: 1280,
 				height: 720,
-				margin: 0.04
+				margin: 0.04,
+				minScale: 0.1,
+				maxScale: 2.0
 			});
 			await deck.initialize();
 		})();
@@ -38,6 +43,7 @@
 		return () => {
 			deck?.destroy();
 			document.body.style.overflow = '';
+			document.documentElement.style.overflow = '';
 		};
 	});
 </script>
@@ -148,5 +154,36 @@
 
 	:global(.reveal .progress span) {
 		background: #6495ed;
+	}
+
+	:global(.reveal table) {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		max-width: 100%;
+		font-size: 0.75em;
+	}
+
+	:global(.reveal .controls) {
+		bottom: 1rem;
+	}
+
+	:global(.reveal .controls button) {
+		color: #6495ed;
+	}
+
+	@media (max-width: 600px) {
+		:global(.reveal h1) {
+			font-size: 1.6em;
+		}
+
+		:global(.reveal h2) {
+			font-size: 1.2em;
+		}
+
+		:global(.reveal p),
+		:global(.reveal ul li) {
+			font-size: 0.8em;
+		}
 	}
 </style>
