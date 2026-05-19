@@ -1,10 +1,8 @@
 # For more details, read this: https://coolify.io/docs/github-actions
 name: Production Deploy
 on:
-  push:
-    branches: [main]
-  repository_dispatch:
-    types: [sveltia-cms-publish]
+  workflow_dispatch: # manual trigger only
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: 'andrasbacsai/github-actions-with-coolify'
