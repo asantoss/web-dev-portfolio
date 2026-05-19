@@ -20,7 +20,7 @@ media_libraries:
     svg:
       optimize: true
   cloudflare_r2:
-    access_key_id: YOUR_R2_ACCESS_KEY_ID
+    access_key_id: a39ed05d5935aa25e066693ae6dce7b4
     bucket: portfolio
     account_id: 841124c36ad8289a27b121b4d3783e30
     public_url: https://media.alexsantos.dev
