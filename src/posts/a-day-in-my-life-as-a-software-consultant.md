@@ -21,9 +21,11 @@ date: 2026-05-19T10:07:00
 
 **Software Consultant**
 
-I manage and work on software projects across multiple clients — part engineer, part project manager, part translator between "business speak" and "tech speak." The following is a snapshot of what an ideal day looks like, but the reality is often more chaotic. The job requires a lot of flexibility and adaptability, and no two days are exactly the same.
+Part engineer. Part project manager. Part translator between "business speak" and "tech speak."
 
-> The job is never quite the same two days in a row.
+Managing software across multiple clients — no two days are the same.
+
+> What follows is an ideal day. Reality is usually more chaotic.
 
 ***
 
@@ -34,7 +36,7 @@ I manage and work on software projects across multiple clients — part engineer
 | 8:00 AM  | Morning catchup    |
 | 9:00 AM  | Stand-ups          |
 | 10:00 AM | Deep work          |
-| 12:00 PM | Lunch (sometimes)  |
+| 12:00 PM | Lunch (hopefully)  |
 | 1:00 PM  | Client calls       |
 | 3:00 PM  | Project management |
 | 4:30 PM  | More dev time      |
@@ -74,20 +76,19 @@ Finally. **Actual coding.**
 
 This is the block I protect at all costs.
 
-- Feature development
-  - Refactoring
-  - Testing
-  - Documentation
-- Bug investigation
-  - Reproducing issues
-  - Debugging
-  - Deploying fixes
-- Proof-of-concept work
-  - Experimenting with new tech
-  - Prototyping solutions for client problems
-  - Exploring architectural changes
+- Feature development — build, refactor, test
+- Bug investigation — reproduce, debug, deploy
+- Proof-of-concept — explore, prototype, validate
 
-**The rule:** no meetings 10-12 unless it's a fire drill, I wish this would actually happen but it rarely does. People often times use me to just reassure themselves that something is possible, and that's fine, but it can be disruptive to deep work. It's really hard to get work done when you're constantly switching contexts, and that's the reality of consulting. You have to be flexible, but you also have to set boundaries to protect your focus time.
+***
+
+## Protecting Focus Time
+
+No meetings 10–12. In theory.
+
+In practice, people pop in to "just check if something is possible" — which is fine, but context switching kills momentum.
+
+> The real skill is knowing when to say "let me finish this first."
 
 ***
 
@@ -104,13 +105,16 @@ Before lunch, I try to clear the PR queue.
 
 ***
 
-## 1:00 PM — Lunch / Daycare Pickup
+## 12:00 PM — Lunch
 
-Ideally, I try to step away from the screen.
+Ideally: step away from the screen.
 
-Realistically... sometimes there's a client that completely disregards my blocked off time and schedules a meeting right in the middle of it. So, lunch can be a bit of a moving target.
+Realistically: a client scheduled a call at noon.
 
-**The consultant's dilemma:** you're billing for your time, so every hour matters — but burnout is real, and breaks make you sharper.
+- Breaks make you sharper
+- Burnout is a billing problem too
+
+> Protecting your time isn't selfish — it's sustainable.
 
 ***
 
@@ -171,13 +175,12 @@ This is often my most productive coding hour — the meetings are done, the inbo
 
 Before closing the laptop:
 
-- Document what I did (for billing and handoffs)
-  - Write clear time entries, this is the most important part of the day, and the one that gets neglected the most. If you don't write good time entries, you won't get paid for your work, and that's a problem. It's not just about billing, it's also about creating a record of what you did for future reference. If you ever need to go back and understand why something was done a certain way, good documentation will save you a lot of time and headaches.
+- Write time entries — if it's not logged, it didn't happen
 - Leave notes for tomorrow-me
-- Send async updates to clients in different timezones
+- Send async updates to clients in other timezones
 - Quick scan: anything that'll explode overnight?
 
-> Future-me is grateful when present-me writes good notes, but I need to get better.
+> Good notes are the cheapest investment you can make in future-you.
 
 ***
 
