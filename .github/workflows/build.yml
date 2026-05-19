@@ -2,7 +2,7 @@
 name: Production Deploy
 on:
   push:
-    branches: [$default-branch]
+    branches: [main]
   repository_dispatch:
     types: [sveltia-cms-publish]
 env:
@@ -30,4 +30,8 @@ jobs:
           # Regular deployment without tag
           DEPLOY_URL="${{ secrets.COOLIFY_URL }}/api/v1/deploy?uuid=${{ secrets.COOLIFY_RESOURCE_ID }}&force=false"
           curl --request GET "$DEPLOY_URL" \
-          --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
+          --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}' \
+          --header 'User-Agent: github-actions/coolify-deploy' \
+          --fail \
+          --silent \
+          --show-error
