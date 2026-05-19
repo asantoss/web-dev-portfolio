@@ -1,9 +1,9 @@
-import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export const config = {
 	client: {
-		id: GITHUB_CLIENT_ID,
-		secret: GITHUB_CLIENT_SECRET
+		id: env.GITHUB_CLIENT_ID,
+		secret: env.GITHUB_CLIENT_SECRET
 	},
 	auth: {
 		tokenHost: 'https://github.com',

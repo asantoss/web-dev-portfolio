@@ -1,14 +1,14 @@
 // src/routes/api/webhooks/summarize/+server.ts
 import { json } from '@sveltejs/kit';
 import { summarizeWithAI } from '$lib/server/summarize';
-import { DATOCMS_API_TOKEN, WEBHOOK_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 const DATO_BASE_URL = 'https://site-api.datocms.com';
 
 export async function POST({ request }) {
 	// 🔐 Verify custom header
 	const auth = request.headers.get('authorization');
-	if (!auth || auth !== `Bearer ${WEBHOOK_SECRET}`) {
+	if (!auth || auth !== `Bearer ${env.WEBHOOK_SECRET}`) {
 		console.warn('🚨 Unauthorized webhook request');
 		return json({ error: 'Unauthorized' }, { status: 401 });
 	}
@@ -25,7 +25,7 @@ export async function POST({ request }) {
 	// 📦 Fetch the post item
 	const postRes = await fetch(`${DATO_BASE_URL}/items/${itemId}`, {
 		headers: {
-			Authorization: `Bearer ${DATOCMS_API_TOKEN}`,
+			Authorization: `Bearer ${env.DATOCMS_API_TOKEN}`,
 			Accept: 'application/json'
 		}
 	});
@@ -50,7 +50,7 @@ export async function POST({ request }) {
 	const updateRes = await fetch(`${DATO_BASE_URL}/items/${itemId}`, {
 		method: 'PUT',
 		headers: {
-			Authorization: `Bearer ${DATOCMS_API_TOKEN}`,
+			Authorization: `Bearer ${env.DATOCMS_API_TOKEN}`,
 			'Content-Type': 'application/json',
 			Accept: 'application/json'
 		},

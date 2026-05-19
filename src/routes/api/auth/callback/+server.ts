@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RequestHandler } from './$types';
 import { AuthorizationCode } from 'simple-oauth2';
-import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 function renderBody(status: string, token?: string): string {
 	return `
@@ -41,8 +41,8 @@ export const GET: RequestHandler = async ({ url }) => {
 			authorizePath: '/login/oauth/authorize'
 		},
 		client: {
-			id: GITHUB_CLIENT_ID,
-			secret: GITHUB_CLIENT_SECRET
+			id: env.GITHUB_CLIENT_ID,
+			secret: env.GITHUB_CLIENT_SECRET
 		}
 	});
 

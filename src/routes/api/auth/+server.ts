@@ -1,6 +1,6 @@
 import { AuthorizationCode } from 'simple-oauth2';
 import { redirect } from '@sveltejs/kit';
-import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export async function GET({ url }) {
 	const provider = url.searchParams.get('provider');
@@ -17,8 +17,8 @@ export async function GET({ url }) {
 
 	const client = new AuthorizationCode({
 		client: {
-			id: GITHUB_CLIENT_ID,
-			secret: GITHUB_CLIENT_SECRET
+			id: env.GITHUB_CLIENT_ID,
+			secret: env.GITHUB_CLIENT_SECRET
 		},
 		auth: {
 			tokenHost: 'https://github.com',

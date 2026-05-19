@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import OpenAI from 'openai';
-import { OPENAI_API_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 const openai = new OpenAI({
-	apiKey: OPENAI_API_KEY
+	apiKey: env.OPENAI_API_KEY
 });
 
 export async function summarizeWithAI(content: string, maxTokens = 100): Promise<string> {
