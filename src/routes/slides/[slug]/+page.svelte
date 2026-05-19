@@ -11,6 +11,8 @@
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let deck: any = null;
 
+		document.body.style.overflow = 'hidden';
+
 		(async () => {
 			await import('reveal.js/reveal.css');
 			await import('reveal.js/theme/black.css');
@@ -35,6 +37,7 @@
 
 		return () => {
 			deck?.destroy();
+			document.body.style.overflow = '';
 		};
 	});
 </script>
@@ -59,10 +62,6 @@
 </div>
 
 <style>
-	:global(body) {
-		overflow: hidden;
-	}
-
 	.presentation-root {
 		position: fixed;
 		inset: 0;
