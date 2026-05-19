@@ -5,7 +5,6 @@
 	let stage = $state(0);
 	let reqItems = $state(0);
 	let typedCode = $state('');
-	let activeFile = $state('');
 	let countActive = $state(0);
 	let countMrr = $state(0);
 	let countSignups = $state(0);
@@ -243,21 +242,18 @@ function UserStats() {
 			later(() => runStage(2), STAGE_DURATIONS[1]);
 		} else if (s === 2) {
 			// Data layer: useStats hook
-			activeFile = 'useStats.ts';
 			const totalMs = CODE_HOOK.length * 22 + 1800;
 			animateProgress(totalMs);
 			typeCode(CODE_HOOK, 22, () => {});
 			later(() => runStage(3), totalMs);
 		} else if (s === 3) {
 			// StatCard component
-			activeFile = 'StatCard.tsx';
 			const totalMs = CODE_CARD.length * 22 + 1800;
 			animateProgress(totalMs);
 			typeCode(CODE_CARD, 22, () => {});
 			later(() => runStage(4), totalMs);
 		} else if (s === 4) {
 			// UserStats assembly
-			activeFile = 'UserStats.tsx';
 			const totalMs = CODE_WIDGET.length * 22 + 1800;
 			animateProgress(totalMs);
 			typeCode(CODE_WIDGET, 22, () => {
@@ -364,7 +360,7 @@ function UserStats() {
 					</div>
 					<div class="editor-body">
 						<div class="line-numbers">
-							{#each Array(lineCount) as _, i (i)}
+							{#each Array(lineCount) as _ln, i (i)}
 								<div class="line-num">{i + 1}</div>
 							{/each}
 						</div>
@@ -435,7 +431,7 @@ function UserStats() {
 
 	<!-- Stage indicator -->
 	<div class="stage-dots">
-		{#each LABELS as _, i (i)}
+		{#each LABELS as _label, i (i)}
 			<div class="dot" class:dot-active={stage === i}></div>
 		{/each}
 	</div>
@@ -463,6 +459,9 @@ function UserStats() {
 			-apple-system,
 			sans-serif;
 		color: #cdd6f4;
+	}
+	:global(button[aria-label*='Switch to']) {
+		display: none !important;
 	}
 
 	.container {
