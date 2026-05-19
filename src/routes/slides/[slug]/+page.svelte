@@ -76,11 +76,13 @@
 		inset: 0;
 		z-index: 9999;
 		background: #191919;
+		touch-action: none;
 	}
 
 	.reveal {
 		width: 100%;
 		height: 100%;
+		touch-action: none;
 	}
 
 	.exit-btn {
