@@ -22,12 +22,12 @@
 	>
 		← Home
 	</a>
-	<section class="flex flex-grow flex-col gap-y-2">
+	<section class=" gap-y-2">
 		<div class="flex h-10 items-center text-base">
 			<h2 class="leading-normal">Posts</h2>
 		</div>
-		<div class="flex flex-col gap-4">
-			{#each data.posts as post}
+		<div class=" gap-4">
+			{#each data.posts as post (post.slug)}
 				<PostCard {post} />
 			{/each}
 		</div>

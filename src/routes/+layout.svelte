@@ -27,9 +27,9 @@
 
 <ThemeToggle />
 <main
-	class="font-lexend flex min-h-screen flex-col items-center bg-gray-100 px-4 pt-8 leading-relaxed text-gray-900 transition-colors duration-300 md:pt-16 dark:bg-black dark:text-gray-200"
+	class="font-lexend min-h-screen flex-col items-center bg-gray-100 px-4 pt-8 leading-relaxed text-gray-900 transition-colors duration-300 md:flex md:pt-16 dark:bg-black dark:text-gray-200"
 >
-	<div class=" flex max-w-xl flex-grow flex-col justify-between gap-y-12">
+	<div class=" flex flex-grow flex-col justify-between gap-y-12 md:max-w-xl">
 		{@render children()}
 	</div>
 	<footer class=" mt-32 flex h-16 flex-col justify-center text-center text-xs leading-normal">
