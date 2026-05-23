@@ -9,7 +9,6 @@
 	const postUrl = `${config.metadata.url}/posts/${post.slug}`;
 </script>
 
-/* eslint-disable svelte/no-at-html-tags */
 <!-- Article-specific OG tags -->
 <OgMeta
 	title={post.title}
